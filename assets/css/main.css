@@ -10,12 +10,12 @@ body {
 }
 
 #printarea {
-    margin-left: 20px;
+    margin-left: 30px;
     margin-top: 66px;
 }
 
 #printareabaf {
-    margin-left: 20px;
+    margin-left: 30px;
     margin-top: 40px;
 }
 
@@ -29,8 +29,9 @@ body {
 #namabaf {
     display: inline-block;
     font-size: 11pt;
-    padding-left: 450px;
+    padding-left: 400px;
     padding-bottom: 8px;
+    text-align: right;
 }
 
 #pembilang {

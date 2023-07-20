@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Print</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body style="text-transform: uppercase;">
+    <div id="printarea">
+        <span id="nama"></span>
+        <br>
+        <span id="rupiah"><span id="pembilang"></span> RUPIAH</span>
+        <br>
+        <span class="uangmuka">UANG MUKA PEMBELIAN SATU UNIT SEPEDA MOTOR YAMAHA</span> <br>
+            <span id="motor"></span> - <span id="warna"></span>
+        <br>
+        <span id="date">DENPASAR, <span id="tanggal"></span>&nbsp;<span id="bulan"></span>&nbsp;<span id="tahun"></span></span>
+        <br>
+        <table id="table">
+            <tr>
+                <td>
+                    <span id="uangmuka"></span>
+                </td>
+                <td>
+                    <span id="ttd">DYAH ANOM PUTRA RINI</span>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+
+    <script src="../assets/js/function.js"></script>
+    <script type="text/javascript">
+        // Passing value to body
+        document.getElementById("nama").innerHTML = `${localStorage.getItem("nama")}`;
+        document.getElementById("pembilang").innerHTML = `${pembilang(localStorage.getItem("uangmuka"))}`;
+        document.getElementById("motor").innerHTML = `${localStorage.getItem("motor")}`;
+        document.getElementById("warna").innerHTML = `${localStorage.getItem("warna")}`;
+        document.getElementById("tanggal").innerHTML = `${localStorage.getItem("tanggal")}`;
+        document.getElementById("bulan").innerHTML = `${localStorage.getItem("bulan")}`;
+        document.getElementById("tahun").innerHTML = `${localStorage.getItem("tahun")}`;
+        document.getElementById("uangmuka").innerHTML = `${formatNumber(localStorage.getItem("uangmuka"))}`;
+    </script>
+</body>
+</html>

@@ -4,98 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sibisma | Kwitansi</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
-<body onload="getTanggal()">
-        <input type="text" id="tanggal" placeholder="Tgl" required>
-        <input type="text" id="bulan" placeholder="Bulan" required>
-        <input type="text" id="tahun" placeholder="Tahun" required>
-    <form action="#">
-        <input type="text" id="nama" placeholder="Nama" required>
-        <input type="text" id="motor" placeholder="Motor" required>
-        <input type="text" id="warna" placeholder="Warna" required>
-        <input type="text" id="nosin" placeholder="Nomor Rangka" required>
-        <input type="text" id="noka" placeholder="Nomor Mesin" required>
-        <input type="number" id="uangmuka" placeholder="Uang Muka" required>
-        <input type="number" id="nominal" placeholder="Nominal Leasing" required>
-        <a onclick="saveData()" href="print.html" target="_blank">Print Nama Konsumen</a>
-        <a onclick="saveData()" href="printbaf.html" target="_blank">Print BAF</a>
-        <button type="reset">Reset</button>
-    </form>
+<body onload="getTanggal()" class="mt-5">
+    <div class="container">
+        <div class="row justify-content-md-center mb-5">
+            <img src="assets/img/logo.png" style="width: 200px;">
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="tanggal" placeholder="Tgl" required>
+                    <label for="tanggal">Tgl</label>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="bulan" placeholder="Bulan" required>
+                    <label for="bulan">Bulan</label>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="tahun" placeholder="Tahun" required>
+                    <label for="tahun">Tahun</label>
+                </div>
+            </div>
+        </div>
+        
+    
+        <form action="#">
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="nama" placeholder="Nama" required>
+                        <label for="nama">Nama</label>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="motor" placeholder="Motor" required>
+                        <label for="motor">Motor</label>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="warna" placeholder="Warna" required>
+                        <label for="warna">Warna</label>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="noka" placeholder="No.Rangka" required>
+                        <label for="noka">No.Rangka</label>
+                    </div>
+                </div>
+            </div>
 
-    <script>
-        // Passing value to body
-        document.getElementById("nama").value = `${localStorage.getItem("nama")}`;
-        document.getElementById("motor").value = `${localStorage.getItem("motor")}`;
-        document.getElementById("warna").value = `${localStorage.getItem("warna")}`;
-        document.getElementById("nosin").value = `${localStorage.getItem("nosin")}`;
-        document.getElementById("noka").value = `${localStorage.getItem("noka")}`;
-        document.getElementById("tanggal").value = `${localStorage.getItem("tanggal")}`;
-        document.getElementById("bulan").value = `${localStorage.getItem("bulan")}`;
-        document.getElementById("tahun").value = `${localStorage.getItem("tahun")}`;
-        document.getElementById("uangmuka").value = `${localStorage.getItem("uangmuka")}`;
-        document.getElementById("nominal").value = `${localStorage.getItem("nominal")}`;
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="nosin" placeholder="No.Mesin" required>
+                        <label for="nosin">No.Mesin</label>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="uangmuka" placeholder="Uang Muka" required>
+                        <label for="uangmuka">Uang Muka</label>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="nominal" placeholder="Nominal Leasing" required>
+                        <label for="nominal">Nominal Leasing</label>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <button type="reset" class="btn btn-outline-danger">Reset</button>
+                </div>
+            </div>
 
-        function getTanggal(){
-            const today = new Date;
-            let yyyy = today.getFullYear();
-            let mm = today.getMonth() + 1; // Months start at 0!
-            let dd = today.getDate();
+            <a class="btn btn-secondary" onclick="saveData()" href="pages/print.html" target="_blank">Print Nama Konsumen</a>
+            &nbsp;
+            <a class="btn btn-primary" onclick="saveData()" href="pages/printbaf.html" target="_blank">Print BAF</a>
+            &nbsp;
+            <a class="btn btn-warning" onclick="saveData()" href="pages/printbaf.html" target="_blank">Print SOF</a>
+            &nbsp;
+            <a class="btn btn-success" onclick="saveData()" href="pages/printbaf.html" target="_blank">Print KSM</a>
+            &nbsp;
+            <a class="btn btn-info" onclick="saveData()" href="pages/printbaf.html" target="_blank">Print MUF</a>
+        </form>
+    </div>
 
-            if (mm == 1) {
-                mm = "Januari";
-            } else if(mm == 2) {
-                mm = "Februari";
-            } else if(mm == 3) {
-                mm = "Maret";
-            } else if(mm == 4) {
-                mm = "April";
-            } else if(mm == 5) {
-                mm = "May";
-            } else if(mm == 6) {
-                mm = "Juni";
-            } else if(mm == 7) {
-                mm = "Juli";
-            } else if(mm == 8) {
-                mm = "Agustus";
-            } else if(mm == 9) {
-                mm = "September";
-            } else if(mm == 10) {
-                mm = "Oktober";
-            } else if(mm == 11) {
-                mm = "November";
-            } else if(mm == 12) {
-                mm = "Desember";
-            } else {
-                mm = "Gak dapet bulannya"
-            }
-            document.getElementById("tanggal").setAttribute("value",dd);
-            document.getElementById("bulan").setAttribute("value",mm);
-            document.getElementById("tahun").setAttribute("value",yyyy);
-        }
+    <footer>
+        <div class="row mt-5 text-center">
+            <span style="color: gray; font-size: 11pt;">&copy;CRM Bisma | Developed by <a href="https://www.instagram.com/dikanayoga/" target="_blank" style="text-decoration: none; color: darkslategray;">Andika Pranayoga</a></span>
+        </div>
+    </footer>   
 
-        function saveData(){
-            // Get Value
-            tanggal = document.getElementById("tanggal").value;
-            bulan = document.getElementById("bulan").value;
-            tahun = document.getElementById("tahun").value;
-            nama = document.getElementById("nama").value;
-            warna = document.getElementById("warna").value;
-            noka = document.getElementById("noka").value;
-            nosin = document.getElementById("nosin").value;
-            motor = document.getElementById("motor").value;
-            uangmuka = document.getElementById("uangmuka").value;
-            nominal = document.getElementById("nominal").value;
-            localStorage.setItem("tanggal", tanggal);
-            localStorage.setItem("bulan", bulan);
-            localStorage.setItem("tahun", tahun);
-            localStorage.setItem("nama", nama);
-            localStorage.setItem("motor", motor);
-            localStorage.setItem("warna", warna);
-            localStorage.setItem("noka", noka);
-            localStorage.setItem("nosin", nosin);
-            localStorage.setItem("uangmuka", uangmuka);
-            localStorage.setItem("nominal", nominal);
-        }
-    </script>
+    <script src="assets/js/print.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>
