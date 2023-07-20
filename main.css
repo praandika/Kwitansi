@@ -1,0 +1,109 @@
+
+@page {
+    size: A4;
+    margin: 0mm;
+}
+
+body {
+    font-family: 'Century Gothic', Helvetica, sans-serif;
+    font-size: 10pt;
+}
+
+#printarea {
+    margin-left: 20px;
+    margin-top: 66px;
+}
+
+#printareabaf {
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+#nama, #leasing {
+    display: inline-block;
+    font-size: 11pt;
+    padding-left: 220px;
+    padding-bottom: 14px;
+}
+
+#namabaf {
+    display: inline-block;
+    font-size: 11pt;
+    padding-left: 450px;
+    padding-bottom: 8px;
+}
+
+#pembilang {
+    display: inline-block;
+    font-size: 11pt;
+    padding-left: 210px;
+    padding-bottom: 14px;
+}
+
+#rupiah {
+    font-size: 11pt;
+}
+
+#motor {
+    font-size: 10pt;
+    padding-left: 170px;
+}
+
+#motorbaf {
+    font-size: 8pt;
+    padding-left: 120px;
+}
+
+#warnabaf {
+    font-size: 8pt;
+}
+
+#warna {
+    font-size: 10pt;
+}
+
+#noka, #nosin {
+    font-size: 8pt;
+}
+
+#nosintext {
+    font-size: 8pt;
+    padding-left: 120px;
+}
+
+.uangmuka {
+    font-size: 8pt;
+    padding-left: 200px;
+    padding-bottom: 2px;
+}
+
+#date {
+    display: inline-block;
+    padding-left: 380px;
+    padding-top: 40px;
+}
+
+#table{
+    padding-top: 50px;
+}
+
+#datebaf {
+    display: inline-block;
+    padding-left: 380px;
+    padding-top: 24px;
+}
+
+#tablebaf{
+    padding-top: 50px;
+}
+
+#nominal, #uangmuka {
+    display: inline-block;
+    font-weight: bold;
+    padding-left: 90px;
+}
+
+#ttd {
+    display: inline-block;
+    padding-left: 220px;
+}
