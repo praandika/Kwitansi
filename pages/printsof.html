@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Print BAF</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body style="text-transform: uppercase;">
+    <div id="printareabaf">
+        <table class="namabaf">
+            <tr>
+                <td>
+                    <span id="namabaf"></span>
+                </td>
+            </tr>
+        </table>
+        
+        <br>
+        <span id="leasing">PT. SUMMIT OTO FINANCE</span>
+        <br>
+        <span id="rupiah"><span id="pembilang"></span> RUPIAH</span>
+        <br>
+        <span class="uangmuka">PELUNASAN PEMBELIAN SATU UNIT SEPEDA MOTOR YAMAHA</span> <br>
+            <span id="motorbaf"></span> - <span id="warnabaf"></span> NO.RANGKA : <span id="noka"></span> <br>
+            <span id="nosintext">NO.MESIN : </span><span id="nosin"></span>
+        <br>
+        <span id="datebaf">DENPASAR, <span id="tanggal"></span>&nbsp;<span id="bulan"></span>&nbsp;<span id="tahun"></span></span>
+        <br>
+        <table id="tablebaf">
+            <tr>
+                <td>
+                    <span id="nominal"></span>
+                </td>
+                <td>
+                    <span id="ttd">DYAH ANOM PUTRA RINI</span>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+
+    <script src="../assets/js/function.js"></script>
+    <script type="text/javascript">
+        // Passing value to body
+        document.getElementById("namabaf").innerHTML = `${localStorage.getItem("nama")}`;
+        document.getElementById("pembilang").innerHTML = `${pembilang(localStorage.getItem("nominal"))}`;
+        document.getElementById("motorbaf").innerHTML = `${localStorage.getItem("motor")}`;
+        document.getElementById("nosin").innerHTML = `${localStorage.getItem("nosin")}`;
+        document.getElementById("noka").innerHTML = `${localStorage.getItem("noka")}`;
+        document.getElementById("warnabaf").innerHTML = `${localStorage.getItem("warna")}`;
+        document.getElementById("tanggal").innerHTML = `${localStorage.getItem("tanggal")}`;
+        document.getElementById("bulan").innerHTML = `${localStorage.getItem("bulan")}`;
+        document.getElementById("tahun").innerHTML = `${localStorage.getItem("tahun")}`;
+        document.getElementById("nominal").innerHTML = `${formatNumber(localStorage.getItem("nominal"))}`;
+    </script>
+</body>
+</html>

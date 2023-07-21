@@ -1,109 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sibisma | Kwitansi</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("assets/img/bg.jpg");
+            margin-top: 180px;
+        }
+
+        .box {
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+
+            padding: 50px 30px;
+        }
+
+        a.btn {
+            font-weight: bold;
+        }
+
+        .credit {
+            /* From https://css.glass */
+            background: rgba(0, 0, 0, 0.72);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(0, 0, 0, 0.3);
+        }
+    </style>
 </head>
-<body onload="getTanggal()" class="mt-5">
+
+<body onload="getTanggal()">
     <div class="container">
-        <div class="row justify-content-md-center mb-5">
-            <img src="assets/img/logo.png" style="width: 200px;">
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="tanggal" placeholder="Tgl" required>
-                    <label for="tanggal">Tgl</label>
-                </div>
+        <div class="box">
+            <div class="row justify-content-md-center mb-5">
+                <img src="assets/img/logo.png" style="width: 200px;">
             </div>
-            <div class="col-md-2">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="bulan" placeholder="Bulan" required>
-                    <label for="bulan">Bulan</label>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="tahun" placeholder="Tahun" required>
-                    <label for="tahun">Tahun</label>
-                </div>
-            </div>
-        </div>
-        
-    
-        <form action="#">
-            <div class="row mb-3">
-                <div class="col-md-3">
-                    <div class="form-floating">
-                        <input type="text" class="form-control" id="nama" placeholder="Nama" required>
-                        <label for="nama">Nama</label>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="tanggal" placeholder="Tgl" required>
+                        <label for="tanggal">Tgl</label>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="motor" placeholder="Motor" required>
-                        <label for="motor">Motor</label>
+                        <input type="text" class="form-control" id="bulan" placeholder="Bulan" required>
+                        <label for="bulan">Bulan</label>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="warna" placeholder="Warna" required>
-                        <label for="warna">Warna</label>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-floating">
-                        <input type="text" class="form-control" id="noka" placeholder="No.Rangka" required>
-                        <label for="noka">No.Rangka</label>
+                        <input type="text" class="form-control" id="tahun" placeholder="Tahun" required>
+                        <label for="tahun">Tahun</label>
                     </div>
                 </div>
             </div>
 
-            <div class="row mb-3">
-                <div class="col-md-3">
-                    <div class="form-floating">
-                        <input type="text" class="form-control" id="nosin" placeholder="No.Mesin" required>
-                        <label for="nosin">No.Mesin</label>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-floating">
-                        <input type="text" class="form-control" id="uangmuka" placeholder="Uang Muka" required>
-                        <label for="uangmuka">Uang Muka</label>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-floating">
-                        <input type="text" class="form-control" id="nominal" placeholder="Nominal Leasing" required>
-                        <label for="nominal">Nominal Leasing</label>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <button type="reset" class="btn btn-outline-danger">Reset</button>
-                </div>
-            </div>
 
-            <a class="btn btn-secondary" onclick="saveData()" href="pages/print.html" target="_blank">Print Nama Konsumen</a>
-            &nbsp;
-            <a class="btn btn-primary" onclick="saveData()" href="pages/printbaf.html" target="_blank">Print BAF</a>
-            &nbsp;
-            <a class="btn btn-warning" onclick="saveData()" href="pages/printbaf.html" target="_blank">Print SOF</a>
-            &nbsp;
-            <a class="btn btn-success" onclick="saveData()" href="pages/printbaf.html" target="_blank">Print KSM</a>
-            &nbsp;
-            <a class="btn btn-info" onclick="saveData()" href="pages/printbaf.html" target="_blank">Print MUF</a>
-        </form>
+            <form action="#">
+                <div class="row mb-3">
+                    <div class="col-md-3">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="nama" placeholder="Nama" required>
+                            <label for="nama">Nama</label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="motor" placeholder="Motor" required>
+                            <label for="motor">Motor</label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="warna" placeholder="Warna" required>
+                            <label for="warna">Warna</label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="noka" placeholder="No.Rangka" required>
+                            <label for="noka">No.Rangka</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-3">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="nosin" placeholder="No.Mesin" required>
+                            <label for="nosin">No.Mesin</label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="uangmuka" placeholder="Uang Muka" required>
+                            <label for="uangmuka">Uang Muka</label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="nominal" placeholder="Nominal Leasing" required>
+                            <label for="nominal">Nominal Leasing</label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="reset" class="btn btn-outline-danger">Reset</button>
+                    </div>
+                </div>
+
+                <a class="btn btn-secondary" onclick="saveData()" href="pages/print.html" target="_blank">Print Nama
+                    Konsumen</a>
+                &nbsp;
+                <a class="btn btn-primary" onclick="saveData()" href="pages/printbaf.html" target="_blank">Print BAF</a>
+                &nbsp;
+                <a class="btn btn-warning" onclick="saveData()" href="pages/printsof.html" target="_blank">Print SOF</a>
+                &nbsp;
+                <a class="btn btn-success" onclick="saveData()" href="pages/printksm.html" target="_blank">Print KSM</a>
+                &nbsp;
+                <a class="btn btn-info" onclick="saveData()" href="pages/printmuf.html" target="_blank">Print MUF</a>
+            </form>
+        </div>
     </div>
 
     <footer>
         <div class="row mt-5 text-center">
-            <span style="color: gray; font-size: 11pt;">&copy;CRM Bisma | Developed by <a href="https://www.instagram.com/dikanayoga/" target="_blank" style="text-decoration: none; color: darkslategray;">Andika Pranayoga</a></span>
+            <span style="font-size: 9pt;">
+                <a href="https://www.instagram.com/dikanayoga/" class="credit" style="padding: 10px; border-radius: 50px; text-decoration: none; color: aliceblue;" target="_blank">&copy;CRM Bisma | Developed by 
+                    <span style="text-decoration: none; color: rgb(160, 151, 246);">Andika Pranayoga</span>
+                </a>
+            </span>
         </div>
-    </footer>   
+    </footer>
 
     <script src="assets/js/print.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
 </body>
+
 </html>

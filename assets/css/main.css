@@ -11,19 +11,20 @@ body {
 
 #printarea {
     margin-left: 30px;
-    margin-top: 66px;
+    margin-top: 61px;
 }
 
 #printareabaf {
     margin-left: 30px;
-    margin-top: 40px;
+    margin-top: 12px;
 }
 
 #nama, #leasing {
     display: inline-block;
     font-size: 11pt;
     padding-left: 220px;
-    padding-bottom: 14px;
+    padding-bottom: 4px;
+    margin-top: -10px;
 }
 
 #namabaf {
@@ -38,7 +39,8 @@ body {
     display: inline-block;
     font-size: 11pt;
     padding-left: 210px;
-    padding-bottom: 14px;
+    padding-bottom: 8px;
+    margin-top: 10px;
 }
 
 #rupiah {
@@ -51,8 +53,10 @@ body {
 }
 
 #motorbaf {
+    display: inline-block;
     font-size: 8pt;
     padding-left: 120px;
+    padding-bottom: 12px;
 }
 
 #warnabaf {
@@ -73,29 +77,31 @@ body {
 }
 
 .uangmuka {
+    display: inline-block;
     font-size: 8pt;
     padding-left: 200px;
-    padding-bottom: 2px;
+    padding-bottom: 10px;
 }
 
 #date {
     display: inline-block;
-    padding-left: 380px;
-    padding-top: 40px;
+    padding-left: 400px;
+    padding-top: 35px;
 }
 
 #table{
-    padding-top: 50px;
+    padding-top: 48px;
 }
 
 #datebaf {
     display: inline-block;
-    padding-left: 380px;
-    padding-top: 24px;
+    padding-left: 400px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 #tablebaf{
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 #nominal, #uangmuka {
@@ -106,5 +112,5 @@ body {
 
 #ttd {
     display: inline-block;
-    padding-left: 220px;
+    padding-left: 240px;
 }
